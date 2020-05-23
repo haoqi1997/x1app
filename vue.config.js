@@ -26,6 +26,7 @@ module.exports = {
         config.resolve.alias
             // .set(路径,绝对路径)
             .set("assets", path.join(__dirname, './src/assets'))
+            .set("components", path.join(__dirname, './src/components'))
 
 
     },
@@ -35,7 +36,9 @@ module.exports = {
         //登录管理
         proxy: {
             "/apiBase": {
-                target: "http://192.168.0.101:8600", //目标源
+                // target: "http://192.168.0.101:8600", //目标源
+                target: "http://192.168.0.254:8600", //内网 
+
                 changeOrgin: true,
                 pathRewrite: {
                     '^/apiBase': ''

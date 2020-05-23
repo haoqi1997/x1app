@@ -25,7 +25,8 @@
     </el-container>
     <!-- 右边的抽屉 -->
     <el-drawer title :visible.sync="drawer" custom-class="drawerstyle">
-      <el-menu
+      <drawerMenu></drawerMenu>
+      <!-- <el-menu
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
@@ -89,12 +90,13 @@
             <a href="javascripu:;" target="_blank" rel="noopener noreferrer">妈耶</a>
           </li>
         </ul>
-      </div>
+      </div>-->
     </el-drawer>
   </div>
 </template>
 
 <script>
+import drawerMenu from 'components/home/drawer'
 export default {
   name: 'Home',
 
@@ -164,7 +166,8 @@ export default {
     //   //   console.log('onScroll -> keyPath', keyPath)
     //   console.log('onScroll -> key', key)
     // }
-  }
+  },
+  components: { drawerMenu }
 }
 </script>
 <style >

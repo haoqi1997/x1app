@@ -9,13 +9,15 @@ Vue.use(ElementUI)
     //引入重置样式
 import "./assets/styleshennts/reset.css"
 //滑动监听
-// import vuescroll from 'vue-scroll'
+import vuescroll from 'vue-scroll'
+Vue.use(vuescroll)
+import NutUI from '@nutui/nutui'
+import '@nutui/nutui/dist/nutui.css'
+Vue.use(NutUI)
 
-// Vue.use(vuescroll)
-// import NutUI from '@nutui/nutui'
-// import '@nutui/nutui/dist/nutui.css'
 
-// Vue.use(NutUI)
+import ServerMixin from './mixin/serverMixin'
+Vue.use(ServerMixin)
 
 Vue.config.productionTip = false
 

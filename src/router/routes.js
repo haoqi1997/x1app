@@ -4,7 +4,7 @@ const routes = [{
     },
     {
         path: '/index',
-        name: '首页',
+        name: '首页盒子',
         meta: {
             title: '欢迎来到净慈寺首页'
         },

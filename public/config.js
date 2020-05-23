@@ -1,0 +1,1 @@
+window.apiBase = '/apiBase' //系统权限
