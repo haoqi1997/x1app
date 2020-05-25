@@ -16,10 +16,9 @@ module.exports = {
     // 指定子路径。比如，如果你的应用部署在
     // https://www.foobar.com/my-app/
     // 那么将这个值改为 `/my-app/`
-    // baseUrl: 'vuePro/hlvy/',//github打包放开
     // baseUrl: './',
     // 将构建好的文件输出到哪里
-    outputDir: 'jcs',
+    outputDir: 'jcsapp',
 
     chainWebpack: config => { //chainWebpack的链式操作
         //config就是Webpack的配置

@@ -2,16 +2,34 @@
   <div class="home">
     <el-header>
       <div class="home_box">
-        <div class="home_logo">logo</div>
-        <div class="home_drawer" @click="drawer = true"></div>
+        <div class="home_logo">
+          <div class="logo">
+            <router-link to="/" style="color:#000">净慈寺</router-link>
+          </div>
+          <span>|</span>
+          <div class="logo_english">
+            JINGCI
+            TEMPLE
+          </div>
+        </div>
+        <div class="home_drawer" @click="drawer = true">
+          <ul>
+            <li></li>
+            <span style=" display: block;height:4pt"></span>
+            <li></li>
+            <span style="display: block;height:4pt"></span>
+
+            <li></li>
+          </ul>
+        </div>
       </div>
     </el-header>
     <el-container>
       <el-main>
-        <div class="main_banner">
-          <h1>banner</h1>
+        <div class="main">
+          <router-view></router-view>
         </div>
-        <router-view></router-view>
+
         <br />
         <br />
         <br />
@@ -20,13 +38,70 @@
         <br />
         <br />
         <br />
+        <div class="footer">
+          <!-- 11111 -->
+          <div class="footer_celerity">
+            <p>快速导航</p>
+            <div class="navigation">
+              <ul>
+                <li style="text-align: left">
+                  <router-link to="/index/regards">关于净慈</router-link>
+                </li>
+                <li>
+                  <router-link to="/index/dynamic">净慈动态</router-link>
+                </li>
+                <li>
+                  <router-link to="/index/figure">净慈人物</router-link>
+                </li>
+                <li style="text-align: end">
+                  <router-link to="/index/culture">净慈文化</router-link>
+                </li>
+                <li style="text-align: left">
+                  <router-link to="/index/law">净慈法务</router-link>
+                </li>
+                <li>
+                  <router-link to="/index/help">助建净慈</router-link>
+                </li>
+                <li>
+                  <router-link to="/index/volunteer">净慈义工</router-link>
+                </li>
+                <li style="text-align: end">
+                  <router-link to="/index/contactUS">联系我们</router-link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 22222 -->
+          <div class="footer_celerity margs">
+            <p>电话</p>
+            <span class="across"></span>
+            <div class="phone">0551-22222222</div>
+          </div>
+          <!-- 33333 -->
+          <div class="footer_celerity margs">
+            <p>邮箱</p>
+            <span class="across"></span>
+            <div class="phone">jingcisi@sdf.com</div>
+          </div>
+          <div class="footer_celerity">
+            <span class="relation">
+              <img src="../assets/img/qq.png" alt />
+            </span>
+            <span class="relation">
+              <img src="../assets/img/weibo.png" alt />
+            </span>
+            <span class="relation">
+              <img src="../assets/img/weixin.png" alt />
+            </span>
+          </div>
+        </div>
       </el-main>
-      <div class="footer"></div>
     </el-container>
+
     <!-- 右边的抽屉 -->
     <el-drawer title :visible.sync="drawer" custom-class="drawerstyle">
-      <drawerMenu></drawerMenu>
-      <!-- <el-menu
+      <!-- <drawerMenu></drawerMenu> -->
+      <el-menu
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
@@ -79,18 +154,18 @@
         </template>
       </el-menu>
       <div class="share">
-        <ul>
-          <li>
-            <a href="javascripu:;" target="_blank" rel="noopener noreferrer">微信</a>
-          </li>
-          <li>
-            <a href="javascripu:;" target="_blank" rel="noopener noreferrer">微博</a>
-          </li>
-          <li>
-            <a href="javascripu:;" target="_blank" rel="noopener noreferrer">妈耶</a>
-          </li>
-        </ul>
-      </div>-->
+        <div class="footer_celerity">
+          <span class="relation">
+            <img src="../assets/img/qq.png" alt />
+          </span>
+          <span class="relation">
+            <img src="../assets/img/weibo.png" alt />
+          </span>
+          <span class="relation">
+            <img src="../assets/img/weixin.png" alt />
+          </span>
+        </div>
+      </div>
     </el-drawer>
   </div>
 </template>
@@ -105,14 +180,8 @@ export default {
       drawer: false, //抽屉开关
       menuList: [
         {
-          functionUrl: '/',
-          name: '净慈寺首页',
-          childList: [
-            {
-              functionUrl: 'home',
-              name: '首页选选1'
-            }
-          ]
+          functionUrl: 'home',
+          name: '净慈寺首页'
         },
         {
           functionUrl: 'regards',
@@ -170,7 +239,7 @@ export default {
   components: { drawerMenu }
 }
 </script>
-<style >
+<style lang="less">
 .home {
   height: 100%;
 }
@@ -181,17 +250,28 @@ export default {
 }
 .home_drawer {
   margin: auto 0;
-  width: 2rem;
-  height: 2rem;
-  background: url('../assets/img/drawer.png');
-  background-size: cover;
+  height: 1.55rem;
+  ul {
+    li {
+      width: 17.5pt;
+      height: 2.5pt;
+      background-color: #000;
+    }
+  }
 }
 .home_logo {
+  display: flex;
   margin: auto 0;
-  width: 5rem;
-  height: 2.5rem;
-  /* background: url('../assets/img/drawer.png');
-  background-size: cover; */
+  span {
+    margin: 0 8pt;
+    color: #bfbfbf;
+  }
+  .logo_english {
+    width: 25.5pt;
+    height: 15pt;
+    font-size: 6pt;
+    color: #bfbfbf;
+  }
 }
 /* 抽屉 */
 .drawerstyle {
@@ -200,31 +280,33 @@ export default {
 .share > ul {
   display: flex;
 }
+.main {
+  width: 86.13%;
+  margin: 0 auto;
+}
 
 /* 布局 */
 .el-header,
 .el-footer {
   color: #333;
-  height: 4rem !important;
+  height: 43pt !important;
   font-size: 1.6rem;
 }
 .el-header {
   position: fixed;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 5.6%;
   box-sizing: border-box;
   flex-shrink: 0;
-  background: aliceblue;
+  background-color: #fff;
 }
 .el-container {
   height: 100%;
 }
 .el-main {
-  margin-top: 4rem;
+  margin-top: 43pt;
   background-color: #e9eef3;
   color: #333;
-  text-align: center;
-  line-height: 16rem;
   font-size: 1.6rem;
   padding: 0rem;
 }
@@ -232,8 +314,58 @@ export default {
   height: 16rem;
   border-bottom: 0.1rem solid #000;
 }
-.el-footer {
-  height: 6rem !important;
+.footer {
+  padding: 25.5pt 25pt 25pt;
+  background-color: #d3c5a5;
+  .footer_celerity {
+    p {
+      color: #a08f67;
+    }
+    .navigation {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li {
+          margin-top: 13.5pt;
+          width: 25%;
+          text-align: center;
+          font-size: 12pt;
+          font-family: 'GenRyuMin TW TTF';
+          font-weight: 400;
+          a {
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+    }
+    .phone {
+      color: rgba(255, 255, 255, 1);
+      font-size: 9pt;
+      font-family: 'GenRyuMin TW TTF';
+    }
+  }
+}
+.margs {
+  margin-top: 36.5pt;
+}
+.relation {
+  display: inline-block;
+  width: 9.5pt;
+  height: 8pt;
+  margin-right: 19.5pt;
+  img {
+    width: 100%;
+  }
+}
+.across::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 9.5pt;
+  height: 0.5pt;
+  margin: 10pt 0;
+  background-color: #fff;
 }
 
 /*选项卡颜色 */

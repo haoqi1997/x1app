@@ -4,4 +4,6 @@
   </div>
 </template>
 
-
+<style >
+@import '../public/TW/font.css';
+</style>
