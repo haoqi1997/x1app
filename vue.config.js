@@ -26,6 +26,7 @@ module.exports = {
             // .set(路径,绝对路径)
             .set("assets", path.join(__dirname, './src/assets'))
             .set("components", path.join(__dirname, './src/components'))
+            .set("styleless", path.join(__dirname, './src/styleless'))
 
 
     },
@@ -46,19 +47,7 @@ module.exports = {
 
         }
     },
-    css: {
-        loaderOptions: {
-            // 给 sass-loader 传递选项
-            scss: {
-                // @/ 是 src/ 的别名
-                // 注意：在 sass-loader v7 中，这个选项名是 "data"
-                prependData: ` 
-                @import "@/assets/custom_theme.scss";
-                @import "@nutui/nutui/dist/styles/index.scss";
-                `,
-            }
-        },
-    }
+
 
 
 

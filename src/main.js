@@ -7,7 +7,13 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(ElementUI)
     //引入重置样式
-import "./assets/styleshennts/reset.css"
+import "assets/styleshennts/reset.css"
+
+// 盒子样式
+import "styleless/homeindex.less"
+
+//
+
 //滑动监听
 import vuescroll from 'vue-scroll'
 Vue.use(vuescroll)
