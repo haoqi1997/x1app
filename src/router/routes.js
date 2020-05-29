@@ -42,12 +42,20 @@ const routes = [{
                 component: resolve => require(['../views/homepage/Figure.vue'], resolve),
             },
             {
-                path: 'culture',
-                name: '净慈文化',
+                path: 'shizuki',
+                name: '南屏指月',
                 meta: {
-                    title: '净慈文化'
+                    title: '南屏指月'
                 },
-                component: resolve => require(['../views/homepage/Culture.vue'], resolve),
+                component: resolve => require(['../views/homepage/Culture/Shizuki.vue'], resolve),
+            },
+            {
+                path: 'song',
+                name: '南屏妙音',
+                meta: {
+                    title: '南屏妙音'
+                },
+                component: resolve => require(['../views/homepage/Culture/Song.vue'], resolve),
             },
             {
                 path: 'law',

@@ -115,7 +115,7 @@
                   :index="subItem.functionUrl"
                   :key="subItem.name"
                 >
-                  <template slot="title" @click="drawer = false">{{ subItem.name }}1</template>
+                  <template slot="title" @click="drawer = false">{{ subItem.name }}</template>
                   <el-menu-item
                     v-for="(threeItem,i) in subItem.childList"
                     :key="i"
@@ -123,7 +123,7 @@
                     @click="drawer = false"
                   >
                     &nbsp;
-                    {{ threeItem.name }}2
+                    {{ threeItem.name }}
                   </el-menu-item>
                 </el-submenu>
                 <el-menu-item
@@ -131,17 +131,12 @@
                   :index="subItem.functionUrl"
                   :key="subItem.name"
                   @click="drawer = false"
-                >{{ subItem.name }}3</el-menu-item>
+                >{{ subItem.name }}</el-menu-item>
               </template>
             </el-submenu>
           </template>
           <template v-else>
-            <el-menu-item
-              @click="drawer = false"
-              :index="item.functionUrl"
-              :key="item.name"
-              :class="{tophome:item.name === '净慈寺首页'}"
-            >
+            <el-menu-item @click="drawer = false" :index="item.functionUrl" :key="item.name">
               &nbsp;
               <span slot="title">{{ item.name }}</span>
             </el-menu-item>
@@ -180,13 +175,7 @@ export default {
         },
         {
           functionUrl: 'regards',
-          name: '关于净慈',
-          childList: [
-            {
-              functionUrl: '/index/regards',
-              name: '关于净慈1'
-            }
-          ]
+          name: '关于净慈'
         },
         {
           functionUrl: 'dynamic',
@@ -198,7 +187,17 @@ export default {
         },
         {
           functionUrl: 'culture',
-          name: '净慈文化'
+          name: '净慈文化',
+          childList: [
+            {
+              functionUrl: '/index/shizuki',
+              name: '南屏指月'
+            },
+            {
+              functionUrl: '/index/song',
+              name: '南屏妙音'
+            }
+          ]
         },
         {
           functionUrl: 'law',

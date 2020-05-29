@@ -27,7 +27,53 @@
       <div style="height: 1rem;"></div>
     </div>
     <div style="height: 1rem;"></div>
-    <div class="Figure_content zhuchi"></div>
+    <div class="Figure_content zhuchi">
+      <p class="zhuchi1">住持</p>
+      <div style="height: 1rem;"></div>
+
+      <div>
+        <span style="color:red">\</span>
+        <span class="zhuchi2">ZHUCHI</span>
+        <div style="height: 1rem;"></div>
+
+        <ul>
+          <li class="zhuchi3">
+            <span class="zhuchispan">开山始祖</span>
+            <span>道潜（？——961）</span>
+          </li>
+          <li class="zhuchi3">
+            <span class="zhuchispan">开山始祖</span>
+            <span>道潜（？——961）</span>
+          </li>
+        </ul>
+        <div style="height: 1rem;"></div>
+      </div>
+    </div>
+    <div style="height: 5rem;"></div>
+
+    <!-- 法嗣 -->
+    <div class="Figure_content zhuchi" style="border:0">
+      <p class="zhuchi1">法嗣</p>
+      <div style="height: 1rem;"></div>
+
+      <div>
+        <span style="color:red">\</span>
+        <span class="zhuchi2">FASI</span>
+        <div style="height: 1rem;"></div>
+
+        <ul>
+          <li class="zhuchi3">
+            <span class="zhuchispan">开山始祖</span>
+            <span>道潜（？——961）</span>
+          </li>
+          <li class="zhuchi3">
+            <span class="zhuchispan">开山始祖</span>
+            <span>道潜（？——961）</span>
+          </li>
+        </ul>
+        <div style="height: 3rem;"></div>
+      </div>
+    </div>
   </div>
 </template>
 <script>

@@ -1,5 +1,5 @@
 <template >
-  <div>净慈文化</div>
+  <div>南屏指月</div>
 </template>
 <script>
 export default {
