@@ -35,15 +35,17 @@ module.exports = {
     devServer: {
         //登录管理
         proxy: {
-            "/apiBase": {
-                // target: "http://192.168.0.101:8600", //目标源
-                target: "http://192.168.0.254:8600", //内网 
-
+            // 系统和登录
+            "/apiLoginSystem": {
+                // target: "http://192.168.0.101:8600", //ip
+                // target: "http://192.168.0.254:8600", //内网 
+                target: "http://120.27.194.72:8600", //生产 
                 changeOrgin: true,
                 pathRewrite: {
-                    '^/apiBase': ''
+                    '^/apiLoginSystem': '' //替换
                 }
             },
+
 
         }
     },

@@ -17,23 +17,23 @@
         </p>
       </div>
       <div style="height: 1rem;"></div>
-      <p class="Dynamic1">净慈寺跨年热情高 祈福得排一个多小时</p>
-      <p style="font-size: .2rem;
-    font-family: GenRyuMin TW TTF;">2019/05/04</p>
-      <div style="height: .5rem;"></div>
-      <div class="two_img">
-        <img src="../../assets/img/home/03.png" alt />
+      <div v-for=" item in reportlist" :key="item.id">
+        <p class="Dynamic1">{{item.title}}</p>
+        <p style="font-size: .2rem;
+    font-family: GenRyuMin TW TTF;">{{item.createdTime}}</p>
+        <div style="height: .5rem;"></div>
+        <div class="two_img">
+          <img :src="item.picture" alt />
+        </div>
+        <div style="height: 2rem;"></div>
+        <div class="Dynamic1">{{item.synopsis}}</div>
+        <div style="height: 3rem;"></div>
+        <div class="know" style="width: 6rem;">
+          了解更多
+          <!-- <router-link to="/index/OfAllGes" style="color: #C4C4C4;">了解更多</router-link> -->
+        </div>
+        <div style="height: 2rem;"></div>
       </div>
-      <div style="height: 2rem;"></div>
-      <div
-        class="Dynamic1"
-      >净慈寺原名“慧日永明院”，至南未时改称“寿宁禅院”，而后又改为“净慈招恩光孝禅寺”，并建五百罗汉堂，规模宏大。据传，苏州西园的五百罗汉堂，就是照此仿造修建的。</div>
-      <div style="height: 3rem;"></div>
-      <div class="know" style="  width: 6rem;">
-        了解更多
-        <!-- <router-link to="/index/OfAllGes" style="color: #C4C4C4;">了解更多</router-link> -->
-      </div>
-      <div style="height: 2rem;"></div>
     </div>
     <!-- 头部 end -->
     <div style="height: 2rem;"></div>
@@ -47,23 +47,23 @@
         </p>
       </div>
       <div style="height: 1rem;"></div>
-      <p class="Dynamic1">净慈寺跨年热情高 祈福得排一个多小时</p>
-      <p style="font-size: .2rem;
-    font-family: GenRyuMin TW TTF;">2019/05/04</p>
-      <div style="height: .5rem;"></div>
-      <div class="two_img">
-        <img src="../../assets/img/home/03.png" alt />
+      <div v-for=" item in journalismList" :key="item.id">
+        <p class="Dynamic1">{{item.title}}</p>
+        <p style="font-size: .2rem;
+    font-family: GenRyuMin TW TTF;">{{item.createdTime}}</p>
+        <div style="height: .5rem;"></div>
+        <div class="two_img">
+          <img :src="item.picture" alt />
+        </div>
+        <div style="height: 2rem;"></div>
+        <div class="Dynamic1">{{item.synopsis}}</div>
+        <div style="height: 3rem;"></div>
+        <div class="know" style="width: 6rem;">
+          了解更多
+          <!-- <router-link to="/index/OfAllGes" style="color: #C4C4C4;">了解更多</router-link> -->
+        </div>
+        <div style="height: 2rem;"></div>
       </div>
-      <div style="height: 2rem;"></div>
-      <div
-        class="Dynamic1"
-      >净慈寺原名“慧日永明院”，至南未时改称“寿宁禅院”，而后又改为“净慈招恩光孝禅寺”，并建五百罗汉堂，规模宏大。据传，苏州西园的五百罗汉堂，就是照此仿造修建的。</div>
-      <div style="height: 3rem;"></div>
-      <div class="know" style="  width: 6rem;">
-        了解更多
-        <!-- <router-link to="/index/OfAllGes" style="color: #C4C4C4;">了解更多</router-link> -->
-      </div>
-      <div style="height: 2rem;"></div>
     </div>
     <!-- 头部 end -->
     <!-- 头部 end -->
@@ -78,23 +78,23 @@
         </p>
       </div>
       <div style="height: 1rem;"></div>
-      <p class="Dynamic1">净慈寺跨年热情高 祈福得排一个多小时</p>
-      <p style="font-size: .2rem;
-    font-family: GenRyuMin TW TTF;">2019/05/04</p>
-      <div style="height: .5rem;"></div>
-      <div class="two_img">
-        <img src="../../assets/img/home/03.png" alt />
+      <div v-for=" item in benefitList" :key="item.id">
+        <p class="Dynamic1">{{item.title}}</p>
+        <p style="font-size: .2rem;
+    font-family: GenRyuMin TW TTF;">{{item.createdTime}}</p>
+        <div style="height: .5rem;"></div>
+        <div class="two_img">
+          <img :src="item.picture" alt />
+        </div>
+        <div style="height: 2rem;"></div>
+        <div class="Dynamic1">{{item.synopsis}}</div>
+        <div style="height: 3rem;"></div>
+        <div class="know" style="width: 6rem;">
+          了解更多
+          <!-- <router-link to="/index/OfAllGes" style="color: #C4C4C4;">了解更多</router-link> -->
+        </div>
+        <div style="height: 2rem;"></div>
       </div>
-      <div style="height: 2rem;"></div>
-      <div
-        class="Dynamic1"
-      >净慈寺原名“慧日永明院”，至南未时改称“寿宁禅院”，而后又改为“净慈招恩光孝禅寺”，并建五百罗汉堂，规模宏大。据传，苏州西园的五百罗汉堂，就是照此仿造修建的。</div>
-      <div style="height: 3rem;"></div>
-      <div class="know" style="  width: 6rem;">
-        了解更多
-        <!-- <router-link to="/index/OfAllGes" style="color: #C4C4C4;">了解更多</router-link> -->
-      </div>
-      <div style="height: 2rem;"></div>
     </div>
     <!-- 头部 end -->
   </div>
@@ -105,11 +105,66 @@ import 'styleless/Dynamic.less'
 export default {
   name: '',
   data() {
-    return {}
+    return {
+      reportlist: [], //法会报道
+      journalismList: [], //新闻
+      benefitList: [], //公益
+      data: {
+        current: 1,
+        size: 10
+      }
+    }
   },
-  created() {},
+  created() {
+    this.getlist()
+    this.journalism()
+    this.getlist3()
+  },
   mounted() {},
-  methods: {},
+  methods: {
+    getlist() {
+      this.$public.noAuthController
+        .noAuthhappeningConditions({
+          current: 1,
+          size: 10,
+          typeCode: 'report'
+        })
+        .then(res => {
+          if (res.code == '000000') {
+            this.reportlist = res.data.records
+          }
+        })
+    },
+    // xinwen
+    journalism() {
+      this.$public.noAuthController
+        .noAuthhappeningConditions({
+          current: 1,
+          size: 10,
+          typeCode: 'news'
+        })
+        .then(res => {
+          if (res.code == '000000') {
+            this.journalismList = res.data.records
+            console.log('mounted -> this.journalismList ', this.journalismList)
+          }
+        })
+    },
+    getlist3() {
+      this.$public.noAuthController
+        .noAuthhappeningConditions({
+          current: 1,
+          size: 10,
+          typeCode: 'charityevent'
+        })
+        .then(res => {
+          if (res.code == '000000') {
+            this.benefitList = res.data.records
+            console.log('mounted ->  this.benefitList', this.benefitList)
+          }
+        })
+    }
+  },
   components: {}
 }
 </script>

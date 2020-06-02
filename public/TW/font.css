@@ -7,3 +7,13 @@
     font-family: "GenRyuMinTW-Regular";
     src: url('GenRyuMinTW-Regular.ttf');
 }
+
+@font-face {
+    font-family: "optima regular";
+    src: url('optima regular.ttf');
+}
+
+@font-face {
+    font-family: "PingFang-TC-Light";
+    src: url('PingFang-TC-Light.ttf');
+}

@@ -18,7 +18,6 @@
             <span style=" display: block;height:4pt"></span>
             <li></li>
             <span style="display: block;height:4pt"></span>
-
             <li></li>
           </ul>
         </div>
@@ -29,10 +28,7 @@
         <div class="main">
           <router-view></router-view>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
+
         <div class="footer">
           <!-- 11111 -->
           <div class="footer_celerity">
@@ -49,7 +45,7 @@
                   <router-link to="/index/figure">净慈人物</router-link>
                 </li>
                 <li style="text-align: end">
-                  <router-link to="/index/culture">净慈文化</router-link>
+                  <router-link to="/index/shizuki">净慈文化</router-link>
                 </li>
                 <li style="text-align: left">
                   <router-link to="/index/law">净慈法务</router-link>
@@ -217,6 +213,14 @@ export default {
         }
       ]
     }
+  },
+  created() {
+    // console.log('created -> this.$public', this.$public.noAuthController)
+    this.$public.noAuthController.resourceIndex().then(res => {
+      if (res.code == '000000') {
+        // console.log('created -> res', res)
+      }
+    })
   },
   methods: {
     handleOpen(key, keyPath) {
